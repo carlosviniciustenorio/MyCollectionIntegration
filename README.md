@@ -4,7 +4,7 @@ Você pode executá-los de diversas maneiras, citarei duas abaixo.
 
 ---------------------------------------------------------
 
-Requisitos: Para executar os testes, a aplicação precisa estar rodando localmente
+Requisitos: Para executar os testes, a aplicação back-end precisa estar rodando localmente
 
 Para executar via linha de comando, é necessário ter o Node.JS instalado na sua máquina.
 
