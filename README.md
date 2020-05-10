@@ -7,6 +7,8 @@ Requisitos: Para executar os testes a aplicação precisa estar rodando localmen
 OBS: Acesse ao arquivo de variáveis de ambiente pelo bloco de notas ou notepad++ (MyCollectionVariables.postman_environment)
 Procure a linha ("value": "https://localhost:44356/api") e altere o valor do endereço "44356" para o endereço local da aplicação na sua máquina
 
+---------------------------------------------------------
+
 1° Opção- Prompt de Comando (CMD)
 Clone ou faça o download do repositório para sua máquina
 
@@ -18,6 +20,7 @@ Execute o seguinte comando: newman run "MyCollection.postman_collection.json" -e
 
 Os testes de integração rodarão na sua máquina automaticamente.
  
+ ----------------------------------------------------------
 
 2° Opção- Postman
 Clone ou faça o download do repositório para sua máquina
