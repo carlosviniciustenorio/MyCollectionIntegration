@@ -16,6 +16,7 @@ Procure a linha ("value": "https://localhost:44356/api"), altere o valor do ende
 ---------------------------------------------------------
 
 1° Opção: Prompt de Comando (CMD)
+
 Clone ou faça o download do repositório para sua máquina
 
 Abra seu prompt de comando e instale o newman com o seguinte comando: npm install -g newman
@@ -29,6 +30,7 @@ Os testes de integração rodarão na sua máquina automaticamente.
  ----------------------------------------------------------
 
 2° Opção: Postman
+
 Clone ou faça o download do repositório para sua máquina
 
 Desabilite a opçao (SSL certificate verification) nas configurações do Postman
