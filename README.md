@@ -2,14 +2,13 @@ Neste projeto contém as coleções dos Testes de Integração da WebAPI MyColle
 
 Você pode executá-los de diversas maneiras, citarei duas abaixo.
 
-OBS: Para executar os testes a aplicação precisa estar rodando localmente. Para executar via linha de comando, é necessário ter o Node.JS instalado na sua máquina. Para executar via Postman, é necessário ter o Postman em sua máquina.
+Requisitos: Para executar os testes a aplicação precisa estar rodando localmente. Para executar via linha de comando, é necessário ter o Node.JS instalado na sua máquina. Para executar via Postman, é necessário ter o Postman em sua máquina.
+
+OBS: Acesse ao arquivo de variáveis de ambiente pelo bloco de notas ou notepad++ (MyCollectionVariables.postman_environment)
+Procure a linha ("value": "https://localhost:44356/api") e altere o valor do endereço "44356" para o endereço local da aplicação na sua máquina
 
 1° Opção- Prompt de Comando (CMD)
 Clone ou faça o download do repositório para sua máquina
-
-Acesse ao arquivo de variáveis de ambiente com o bloco de notas ou notepad++ (MyCollectionVariables.postman_environment)
-
-Procure a linha ("value": "https://localhost:44356/api") e altere o valor do endereço para o endereço local da aplicação na sua máquina
 
 Abra seu prompt de comando e instale o newman com o seguinte comando: npm install -g newman
 
