@@ -11,7 +11,7 @@ Procure a linha ("value": "https://localhost:44356/api") e altere o valor do end
 
 ---------------------------------------------------------
 
-1° Opção- Prompt de Comando (CMD)
+1° Opção: Prompt de Comando (CMD)
 Clone ou faça o download do repositório para sua máquina
 
 Abra seu prompt de comando e instale o newman com o seguinte comando: npm install -g newman
@@ -24,10 +24,12 @@ Os testes de integração rodarão na sua máquina automaticamente.
  
  ----------------------------------------------------------
 
-2° Opção- Postman
+2° Opção: Postman
 Clone ou faça o download do repositório para sua máquina
 
-No Postman, clique na opção do canto superior esquerdo ao lado de New OPÇÃO (Import)
+Desabilite a opçao (SSL certificate verification) nas configurações do Postman
+
+Clique na opção do canto superior esquerdo ao lado de New OPÇÃO (Import)
 
 Selecione os Arquivos (MyCollection.postman_collection) e (MyCollectionVariables.postman_environment) que estão na pasta clonada
 
