@@ -1,4 +1,4 @@
-Neste projeto contém as coleções dos Testes de Integração da WebAPI MyCollection.
+Este projeto contém as coleções dos Testes de Integração da WebAPI MyCollection.
 
 Você pode executá-los de diversas maneiras, citarei duas abaixo.
 
