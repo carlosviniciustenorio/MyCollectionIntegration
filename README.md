@@ -2,6 +2,8 @@ Este projeto contém as coleções dos Testes de Integração da WebAPI MyCollec
 
 Você pode executá-los de diversas maneiras, citarei duas abaixo.
 
+---------------------------------------------------------
+
 Requisitos: Para executar os testes a aplicação precisa estar rodando localmente. Para executar via linha de comando, é necessário ter o Node.JS instalado na sua máquina. Para executar via Postman, é necessário ter o Postman em sua máquina.
 
 OBS: Acesse ao arquivo de variáveis de ambiente pelo bloco de notas ou notepad++ (MyCollectionVariables.postman_environment)
