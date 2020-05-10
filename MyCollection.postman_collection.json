@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "239da16d-3510-4512-9e0b-c5adb27f7b36",
+		"name": "MyCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Cadastrar Usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6c86e029-c8fc-4361-b770-2c260eeb25d8",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"postman.setEnvironmentVariable(\"IdUsuario\", data.id);",
+									"",
+									"postman.setEnvironmentVariable(\"NameUsuario\", data.name);",
+									"",
+									"postman.setEnvironmentVariable(\"EmailUsuario\", data.email);",
+									"",
+									"postman.setEnvironmentVariable(\"PhoneUsuario\", data.phone);",
+									"",
+									"postman.setEnvironmentVariable(\"EnderecoUsuario\", data.endereco);",
+									"",
+									"//Verifica se o Usuário foi criado com sucesso   ",
+									"tests[\"Usuário criado com sucesso\"] = responseCode.code === 200;    ",
+									"",
+									"tests[\"Nome correto cadastrado com sucesso\"] = data.name === pm.environment.get(\"NameUsuario\");",
+									"",
+									"tests[\"Email correto cadastrado com sucesso\"] = data.email === pm.environment.get(\"EmailUsuario\");",
+									"",
+									"tests[\"Telefone correto cadastrado com sucesso\"] = data.phone === pm.environment.get(\"PhoneUsuario\");",
+									"",
+									"tests[\"Endereço correto cadastrado com sucesso\"] = data.endereco === pm.environment.get(\"EnderecoUsuario\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Carlos\",\n\t\"email\":\"carlos@gmail.com\",\n\t\"phone\":\"99999\",\n\t\"endereco\":\"Rua dos artistas\"\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/User",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Usuários",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51aa5e67-d323-4e61-bb09-47774442890a",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"//Verifica se os Usuários foram retornados com sucesso   ",
+									"tests[\"Usuários retornados com sucesso\"] = responseCode.code === 200;    "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05cabe78-19e2-431e-b4d2-b60afca2a655",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"//Verifica se os Usuários foram retornados com sucesso   ",
+									"tests[\"O Usuário foi retornado com sucesso\"] = responseCode.code === 200;",
+									"",
+									"tests[\"ID correto do Usuário retornado com sucesso\"] = data.id == pm.environment.get(\"IdUsuario\");",
+									"",
+									"tests[\"Nome correto do usuário retornado com sucesso\"] = data.name === pm.environment.get(\"NameUsuario\");",
+									"",
+									"tests[\"Email correto do usuário retornado com sucesso\"] = data.email === pm.environment.get(\"EmailUsuario\");",
+									"",
+									"tests[\"Telefone correto do usuário retornado com sucesso\"] = data.phone === pm.environment.get(\"PhoneUsuario\");",
+									"",
+									"tests[\"Endereço correto do usuário retornado com sucesso\"] = data.endereco === pm.environment.get(\"EnderecoUsuario\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/{{IdUsuario}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{IdUsuario}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0ca91de4-9135-425d-8a7e-076aaebafb0e",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"postman.setEnvironmentVariable(\"NameUsuario\", data.name);",
+									"",
+									"postman.setEnvironmentVariable(\"EmailUsuario\", data.email);",
+									"",
+									"postman.setEnvironmentVariable(\"PhoneUsuario\", data.phone);",
+									"",
+									"postman.setEnvironmentVariable(\"EnderecoUsuario\", data.endereco);",
+									"",
+									"//Verifica se Usuário foi atualizado com sucesso   ",
+									"tests[\"Usuário atualizado com sucesso\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Nome atualizado com sucesso\"] = data.name === pm.environment.get(\"NameUsuario\");",
+									"",
+									"tests[\"Email atualizado com sucesso\"] = data.email === pm.environment.get(\"EmailUsuario\");",
+									"",
+									"tests[\"Telefone atualizado com sucesso\"] = data.phone === pm.environment.get(\"PhoneUsuario\");",
+									"",
+									"tests[\"Endereço atualizado com sucesso\"] = data.endereco === pm.environment.get(\"EnderecoUsuario\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "621510cc-f829-4e6c-94b8-a9739cc41699",
+								"exec": [
+									"postman.setEnvironmentVariable(\"NameUsuario\", data.name);",
+									"",
+									"postman.setEnvironmentVariable(\"EmailUsuario\", data.email);",
+									"",
+									"postman.setEnvironmentVariable(\"PhoneUsuario\", data.phone);",
+									"",
+									"postman.setEnvironmentVariable(\"EnderecoUsuario\", data.endereco);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Carlos Vinícius\",\n\t\"email\":\"carlosviniciustenorio@gmail.com\",\n\t\"phone\":\"99999-9999\",\n\t\"endereco\":\"Rio de Janeiro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/User/{{IdUsuario}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{IdUsuario}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c2727e63-d444-4f0d-b186-01f0e56ae23a",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"//Verifica se Usuário foi deletado com Sucesso",
+									"tests[\"Usuário deletado com sucesso\"] = responseCode.code === 200;    "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/{{IdUsuario}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{IdUsuario}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Itens",
+			"item": [
+				{
+					"name": "Cadastrar Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fe189f49-eec8-4dbe-9d77-e72609e2a6d8",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"postman.setEnvironmentVariable(\"IdItem\", data.id);",
+									"",
+									"postman.setEnvironmentVariable(\"NameItem\", data.name);",
+									"",
+									"postman.setEnvironmentVariable(\"TypeItem\", data.type);",
+									"",
+									"postman.setEnvironmentVariable(\"LoanItem\", data.loan);",
+									"",
+									"//Verifica se o Item foi criado com sucesso   ",
+									"tests[\"Item criado com sucesso\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Nome correto cadastrado com sucesso\"] = data.name === pm.environment.get(\"NameItem\");",
+									"",
+									"tests[\"O item está Emprestado\"] = data.loan === true;",
+									"",
+									"tests[\"Tipo correto cadastrado com sucesso\"] = data.type == pm.environment.get(\"TypeItem\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Raça Negra\",\n\t\"type\":2,\n\t\"loan\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Itens",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Itens",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7b9b78ee-d845-41dc-b252-d64d8129dc7e",
+								"exec": [
+									"//Verifica se os Itens foram retornados com sucesso   ",
+									"tests[\"Itens retornados com sucesso\"] = responseCode.code === 200;    "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Itens",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0b14bf90-41ff-4b6b-a348-b061b7289617",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"//Verifica se o Item foi retornado com sucesso",
+									"tests[\"Item retornado com sucesso\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Nome correto do item retornado com sucesso\"] = data.name === pm.environment.get(\"NameItem\");",
+									"",
+									"tests[\"O item está Emprestado\"] = data.loan === true;",
+									"",
+									"tests[\"Tipo correto do item retornado com sucesso\"] = data.type == pm.environment.get(\"TypeItem\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Itens/{{IdItem}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Itens",
+								"{{IdItem}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "17c688b6-d963-4f40-a54e-265883f63a72",
+								"exec": [
+									"var data = JSON.parse(responseBody)",
+									"",
+									"postman.setEnvironmentVariable(\"NameItem\", data.name);",
+									"",
+									"postman.setEnvironmentVariable(\"LoanItem\", data.loan);",
+									"",
+									"postman.setEnvironmentVariable(\"TypeItem\", data.type);",
+									"",
+									"//Verifica se o Item foi atualizado com sucesso   ",
+									"tests[\"Item atualizado com sucesso\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Nome atualizado com sucesso\"] = data.name === pm.environment.get(\"NameItem\");",
+									"",
+									"tests[\"Status do item atualizado com sucesso\"] = data.loan === false;",
+									"",
+									"tests[\"Tipo correto atualizado com sucesso\"] = data.type == pm.environment.get(\"TypeItem\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Raça Negra\",\n\t\"type\":2,\n\t\"loan\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Itens/{{IdItem}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Itens",
+								"{{IdItem}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "25eddef7-c8c0-44d4-8319-92ab03d1fbe8",
+								"exec": [
+									"//Verifica se o Item foi deletado com sucesso",
+									"tests[\"Item deletado com sucesso\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Itens/{{IdItem}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Itens",
+								"{{IdItem}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
