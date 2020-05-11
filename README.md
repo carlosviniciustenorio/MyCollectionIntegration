@@ -1,4 +1,4 @@
-Este projeto contém as coleções dos Testes de Integração da WebAPI MyCollection.
+Este projeto contém as coleções para realizar Requisições na WebAPI MyCollection.
 
 Você pode executá-los de diversas maneiras, citarei duas abaixo.
 
@@ -11,7 +11,7 @@ Para executar via linha de comando, é necessário ter o Node.JS instalado na su
 Para executar via Postman, é necessário ter o Postman na sua máquina
 
 OBS: Acesse ao arquivo de variáveis de ambiente pelo bloco de notas ou notepad++ (MyCollectionVariables.postman_environment)
-Procure a linha ("value": "https://localhost:44356/api"), altere o valor do endereço "44356" para o endereço local da aplicação na sua máquina e salve a alteração.
+Procure a linha ("value": "https://localhost:11111/api"), altere o valor do endereço "11111" para o endereço local da aplicação na sua máquina e salve a alteração.
 
 ---------------------------------------------------------
 
