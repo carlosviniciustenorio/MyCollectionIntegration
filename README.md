@@ -35,7 +35,7 @@ Clone ou faça o download do repositório para sua máquina
 
 Desabilite a opçao (SSL certificate verification) nas configurações do Postman
 
-Clique na opção do canto superior esquerdo ao lado de New OPÇÃO (Import)
+Clique na opção do canto superior esquerdo (Import)
 
 Selecione os Arquivos (MyCollection.postman_collection) e (MyCollectionVariables.postman_environment) que estão na pasta clonada
 
