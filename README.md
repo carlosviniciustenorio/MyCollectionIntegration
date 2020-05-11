@@ -39,6 +39,6 @@ Clique na opção do canto superior esquerdo (Import)
 
 Selecione os Arquivos (MyCollection.postman_collection) e (MyCollectionVariables.postman_environment) que estão na pasta clonada
 
-Após isso, clique no canto superior direito onde está escrito ("No Environment") e selecione a opçao ("MyCollectionVariables")
+Após isso, clique no canto superior direito onde está escrito ("No Environment") e selecione a opção ("MyCollectionVariables")
 
-Você pode executar os testes de maneira manual (Abra as pastas e realize as requisições) ou "automática" (Clique na opção de "play" no canto superior direito da pasta > run > Run MyCollection).
+Você pode executar os testes de maneira manual (Abra as pastas e realize as requisições) ou "automática" (Clique na opção de "play" no canto superior direito da pasta MyCollection > run > Run MyCollection).
