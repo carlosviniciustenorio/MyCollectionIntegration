@@ -8,7 +8,7 @@ Requisitos: Para executar os testes, a aplicação back-end precisa estar rodand
 
 Para executar via linha de comando, é necessário ter o Node.JS instalado na sua máquina
 
-Para executar via Postman, é necessário ter o Postman na sua máquina
+Para executar via Postman, é necessário ter o Postman instalado na sua máquina
 
 OBS: Acesse ao arquivo de variáveis de ambiente pelo bloco de notas ou notepad++ (MyCollectionVariables.postman_environment)
 Procure a linha ("value": "https://localhost:11111/api"), altere o valor do endereço "11111" para o endereço local da aplicação na sua máquina e salve a alteração.
