@@ -1,4 +1,4 @@
-Este projeto contém as coleções para realizar Requisições na WebAPI MyCollection.
+Este projeto contém as coleções para realizar Requisições na API do projeto MyCollection.
 
 Você pode executá-los de diversas maneiras, citarei duas abaixo.
 
